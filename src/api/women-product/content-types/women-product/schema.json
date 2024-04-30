@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "women_products",
+  "info": {
+    "singularName": "women-product",
+    "pluralName": "women-products",
+    "displayName": "WomenProduct"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "nav_links": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::nav-link.nav-link",
+      "inversedBy": "women_products"
+    }
+  }
+}

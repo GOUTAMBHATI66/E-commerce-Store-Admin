@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nav_links",
+  "info": {
+    "singularName": "nav-link",
+    "pluralName": "nav-links",
+    "displayName": "NavLink"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "men_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::men-product.men-product",
+      "mappedBy": "nav_links"
+    },
+    "women_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::women-product.women-product",
+      "mappedBy": "nav_links"
+    },
+    "children_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::children-product.children-product",
+      "mappedBy": "nav_links"
+    },
+    "electronic_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::electronic-product.electronic-product",
+      "mappedBy": "nav_links"
+    }
+  }
+}
